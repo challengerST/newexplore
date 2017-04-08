@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>file文档处理</title>
+    <script src="../ajax/jquery.min.js"></script>
+    <script src="../VueJs2/js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>{{title}}</h1>
+    <h1>{{ sayhello() }}</h1>
+    <input type="text" v-on:input="changeTitle">
+</div>
+<div id="add2">
+        <span v-bind:title="message">
+Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+        </span>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            title: 'hello vue!'
+        },
+        methods: {
+            changeTitle: function (event) {
+                this.title = event.target.value;
+            }
+        }
+    });
+    var app2=new Vue({
+        el:'#add2',
+        data:{
+            message:'you loaded this page on'+new Date()
+        }
+    })
+</script>
+</body>
+</html>

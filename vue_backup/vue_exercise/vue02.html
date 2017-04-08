@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue模板v-once</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1 v-once>{{ title }}</h1>
+    <p>{{ sayHello() }} - <a :href="link" target="_blank">百度</a></p>
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello Vue',
+            link: 'http://baidu.com'
+        },
+        methods: {
+            sayHello(){
+                this.title = 'Hello !';
+                return this.title;
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue模板v-html</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ link }}</p>
+    <p v-html="link"></p>
+</div>
+<div id="app2">
+    <button v-on:click='count ++'>增加1</button>
+    <button v-on:click="reduction">减少 1</button>
+    <p>{{ count }}次</p>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            link: 'hello - <a href="http://www.baidu.com" target="_blank">百度</a>'
+        }
+    });
+    var app2 = new Vue({
+        el: '#app2',
+        data: {
+            count:0
+        },
+        methods:{
+            reduction(){
+                this.count--;
+            }
+        }
+    });
+</script>
+</body>
+</html>

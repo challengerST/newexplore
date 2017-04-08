@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>file文档处理</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>{{title}}</h1>
+    <h1>{{ sayhello() }}</h1>
+    <input type="text" v-on:blur="changeTitle">
+    <input type="text" v-on:input="changeTitle">
+    <!--v-on:input等同于v-model-->
+    <input type="text" v-model="title">
+    <button v-on:click="alert">ok</button>
+</div>
+<div id="add2">
+        <span v-bind:title="message">
+Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+        </span>
+</div>
+<div id="app3">
+    <p v-if="seen">i am winner</p>
+</div>
+<div id="app4">
+    <ol>
+        <li v-for="todo in todos">
+            {{todo.aa}}
+        </li>
+        <li>
+            <!--<img src="" alt="">-->
+        </li>
+    </ol>
+</div>
+<div id="app5">
+    <a v-bind:href="link" >百度</a>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            title: 'hello vue!'
+        },
+        methods: {
+            changeTitle: function (event) {
+                this.title = event.target.value;
+            },
+            alert: function () {
+//                this.title = event.target.value;
+                alert(this.title);
+            },
+            sayhello(){
+                return this.title;
+            }
+        }
+    });
+    var app2 = new Vue({
+        el: '#add2',
+        data: {
+            message: 'you loaded this page on' + new Date()
+        }
+    });
+    var app3 = new Vue({
+        el: '#app3',
+        data: {
+            seen: false
+        }
+    });
+    var app4 = new Vue({
+        el: '#app4',
+        data: {
+            todos: [
+                { aa: 'tt' },
+                { aa: 'Learn Vue' },
+                { aa: 'Build something awesome' }
+            ]
+    }
+    })
+    var app5 = new Vue({
+        'el':'#app5',
+        data:{
+            link:'http://www.baidu.com'
+        }
+    })
+</script>
+</body>
+</html>
