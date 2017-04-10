@@ -1,0 +1,31 @@
+<!document html>
+<html>
+<head>
+    <title></title>
+</head>
+<script src="../jquery.min.js"></script>
+<script src="../handlebars/handlebars.min.js"></script>
+<body>
+<div class="start"></div>
+<script id="tt" type="text/x-handlebars-template">
+    <!--{{#people}}-->
+    <p>{{formphonenum phone}}</p>
+    <!--{{/people}}-->
+</script>
+<script>
+    var content=Handlebars.compile($('#tt').html());
+    Handlebars.registerHelper('formphonenum',function(phonenum){
+        var ss=phonenum.toString();
+        return '('+ss.substr(0,3)+')'+ss.substr(3,3)+'-'+ss.substr(6,4);
+    });
+    var context={
+        people:[
+            {phone:'12312412421'},
+            {phone:'23333333333332'}
+        ]
+    };
+    var html=content(context);
+    $('.start').html(html);
+</script>
+</body>
+</html>

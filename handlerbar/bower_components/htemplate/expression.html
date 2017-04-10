@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handlebars Expressions Example</title>
+</head>
+<style>
+</style>
+<script src="../jquery.min.js"></script>
+<script src="../handlebars/handlebars.min.js"></script>
+<body>
+<div class="start"></div>
+<!--这里是你想写出什么样子的就用什么样子的结构-->
+<!--<script id="enter-template" type="text/x-handlebars-template">-->
+    <!--<h1>{{title}}</h1>-->
+    <!--<div class="body">-->
+        <!--{{body}}-->
+    <!--</div>-->
+<!--</script>-->
+<!--<script>-->
+    <!--$(function(){-->
+        <!--var source=$('#enter-template').html();-->
+        <!--var template=Handlebars.compile(source);-->
+        <!--var context={-->
+            <!--'title':'our name',-->
+            <!--'body':'ourname'-->
+        <!--};-->
+        <!--var html=template(context);-->
+        <!--$('.start').html(html);-->
+    <!--})-->
+<!--</script>-->
+<script id="tt" type="text/x-handlebars-template">
+    <h1>{{title}}</h1>
+</script>
+<!--<script>-->
+    <!--var content=Handlebars.compile($('#tt').html());-->
+<!--//    预编译-->
+    <!--var context={'title':'name'};-->
+<!--//    引入外部对象-->
+    <!--var html=content(context);-->
+    <!--$('.start').html(html);-->
+<!--</script>-->
+<script>
+    var content=Handlebars.compile($('#tt').html());
+    var context={'title':'12name'};
+    var html=content(context);
+    $('.start').html(html);
+</script>
+</body>
+</html>

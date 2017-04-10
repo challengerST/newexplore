@@ -13,21 +13,29 @@
 </div>
 <!--this is a list which will rendered by handlebars template.    -->
 <script id="enter-template" type="text/x-handlebars-template">
-    <div class="start">
         <h1>{{title}}</h1>
         <div class="body">
             {{body}}
         </div>
-    </div>
 </script>
 <script>
+    //basic usage
+//    $(function(){
+//        var source=$('#enter-template').html();
+//        var template=Handlebars.compile(source);
+//        var context={'title':'wanchen','body':'hahah'};
+//        var html =template(context);
+//        $('.start').html(html);
+//    });
+    //three brackets
     $(function(){
         var source=$('#enter-template').html();
         var template=Handlebars.compile(source);
-        var context={'title':'wanchen','body':'hahah'};
-        var html =template(context);
+        var context={'title':'wanchenlong','body':'<p>i love &lt;p&gt; drawing</p>'};
+        var html=template(context);
         $('.start').html(html);
     });
+//    在这里的话需要写上三个大括号
 
 </script>
 </body>
