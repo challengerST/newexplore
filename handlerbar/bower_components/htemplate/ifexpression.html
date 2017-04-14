@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<script src="../jquery.min.js"></script>
+<script src="../handlebars/handlebars.min.js"></script>
+<body>
+<div id="list">
+</div>
+<script id="tt-template" type="text/x-handlebars-template">
+{{#people}}
+  <p>
+  {{title}}
+{{#if author}}
+{{#with author}}
+{{first_name}}
+{{/with}}
+{{else}}
+unknow author
+{{/if}}
+  </p>
+{{/people}}
+</script>
+<script>
+var content=Handlebars.compile($('#tt-template').html());
+// 模拟数据
+      var data = {
+        people: [
+          { title: "first people: ", author: {first_name: "Alan", last_name: "Johnson"},  },
+          { title: "second people: " },
+          { title: "fourth people: ", author: {first_name: "Asn", last_name: "Smith"},  },
+        ]
+      };
+var html=content(data)   ;
+$('#list').html(html);
+
+</script>
+</body>
+</html>
