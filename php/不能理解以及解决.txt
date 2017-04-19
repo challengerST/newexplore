@@ -1,0 +1,21 @@
+cygwin;
+virtualbox;
+netstat看端口是否开着
+composer
+测试数据库
+
+
+
+解决不了的：
+<?php
+$x="5";
+$y="10";
+function mytest(){
+    $GLOBALS['x'];//这里的不理解
+echo "我是x ".$x."<br>";//无法输出
+echo "我是y ".$y."<br>";//
+}
+mytest();
+echo $x;
+echo $y;//10
+?>  
