@@ -1,0 +1,53 @@
+the use of static；
+the difference of singal and double quotation marks;
+dot and comma difference;
+echo '1+5=' . 1;
+the point is the first to be stitched without calculation;
+why is it a comma?
+1. echo ('1+5' . 5)+1; //2
+we give the front of the brackets after the results are the same.Prove that PHP is the fisrt to connect the string and then add the 
+calculation.according to the direction from left to right.
+so good .since it is the first to connect to the string.so it should be "1+55".then use this string plus 1.why is it 2;
+this is related to the fact that the string in Php becomes a number.Let's look at the following example;
+1. echo (int)'abc1'; //0
+2. echo (int)'1abc'; //1
+3. echo (int)'2abc'; //2
+4. echo (int)'22abc'; //22
+From the above example we can see that if a string is cast to a number,PHP will serach for the begining of the string,if the
+begining is a number to convert.if not directly return to 0;back to just 1+55,so after the mandatory type conversion should be 1.
+On this basis,plus 1.of course 2;
+in order to prove our guess,let us vertify it;
+1. echo '5+1=' . 1+5; //10
+2. echo '5+1=' . 5+1; //6
+3. echo '1+5=' . 1+5; //6
+4. echo '1+5=' . 5+1; //2
+Our proof is correct
+$cars=array("Volvo","BMW","SAAB");
+at is an meaning of the reference;
+echo and print the difference:
+print $a,$b;throwing an error;(because it can only output an string);
+int is an integer;
+class_object is my pain points;
+get_object_vars：
+a class can contain its own varaibles,contants,and functions;
+when to use var_dump and when to use echo;
+the space is also the length of the character inside;
+work disk:
+cygwin;
+virtualbox;
+netstat check if the port is open;
+composer
+test contect mysQl;
+
+<?php
+$x="5";
+$y="10";
+function mytest(){
+    $x=$GLOBALS['x'];//
+echo "我是x ".$x."<br>";//
+echo "我是y ".$y."<br>";//
+}
+mytest();
+echo $x;
+echo $y;//10
+?>  

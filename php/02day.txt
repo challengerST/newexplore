@@ -1,0 +1,3 @@
+1.the global variable is not declared;
+2.the array must be preceded by an array;
+3.
