@@ -2,3 +2,4 @@
 2.the array must be preceded by an array;
 3.peculiar wording foreach($arr2 as $x=>$y);
 4.note the direction of the arrow $arr2=array("1"=>"a","2"=>"b","3"=>"c");
+5.
