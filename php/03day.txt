@@ -1,0 +1,1 @@
+unset($a) reset the association of variables with memory;
