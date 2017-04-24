@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+ini_set('html_errors', true);
 // $arr=array("0"=>"1","1"=>"2","2"=>"3");
 // print_r($arr);
 // echo "<br>";
@@ -33,8 +36,11 @@
 // list( , ,$power)=$arr;
 // echo $power;
 //the use of list
-list($a, list($b, $c)) = array(1, array(2, 3));
-
-var_dump($a, $b, $c);
-
+function Adarr(){
+    return array(1,2,3);
+}
+$prearr=Adarr()[1];
+print_r($prearr);
+list(, $secondElement) = Adarr();
+print_r($secondElement);
 ?>
