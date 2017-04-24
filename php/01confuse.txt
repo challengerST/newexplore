@@ -50,4 +50,7 @@ echo "i am y ".$y."<br>";//
 mytest();
 echo $x;
 echo $y;//10
-?>  
+?>
+
+2017/4/24
+the use of list:don't know why has been given the wrong 
