@@ -1,1 +1,36 @@
 the switch event must be end with break; 
+the begining must determine whether has submission;
+99 mulitiplication table;
+
+inverted 99 mulitiplication table:
+for($i=9;$i>0;$i--){
+    for($j=1;$j<=$i;$j++){   
+        echo $i."*".$j."=".$i*$j;
+    }
+        echo "<br>";    
+}
+
+recursive function:
+tired ride:
+function run($a){
+if($a==0){
+return 0;
+}else{
+if($a==1){
+return 1;
+}else{
+return $a*run($a-1);
+}
+}
+
+}
+echo run(4);
+accumulate:
+function accumulate($a){
+if($a==1){
+return 1;
+}else{
+return $a+accumulate($a-1);
+}
+}
+echo accumulate(3);
