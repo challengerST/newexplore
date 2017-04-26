@@ -1,0 +1,13 @@
+@:singel-line masking error;
+date calculate:
+$a=strtotime("now");
+$b=strtotime("01 may 2017");
+$c=ceil(($b-$a)/60/60/24);
+converted into day;
+the generated verification code will not be written yet;
+date("l")is L not 1;
+meanwhile date("l") the output of the function is capitalized;
+if u must use the get method to pass parameters;
+please use urlencode() function to code;
+please use urldecode() function to decode;
+rand function can only produce a number;

@@ -77,13 +77,14 @@ echo "<form method='post' action=''>",
 "<input type='submit' name='sub' value='确定'>",
 "</form>";
 define("pi","0.313");
+session_start();
 function creatE($str){
 return $str=$str+pi;
 }
 function destoryE($str){
 return $str=$str-pi;
 }
-if($_POST[sub]){
+if(isset($_POST[sub])){
 echo "加密口令:".creatE($_POST[str])."<br>";
 $_SESSION[pwd]=creatE($_POST[str]);
 }
