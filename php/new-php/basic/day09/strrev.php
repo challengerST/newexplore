@@ -1,6 +1,10 @@
 <?php
-if(isset($_POST[submit])){
-echo $_POST[file];
+if(isset($_POST[sub])){
+// echo $_POST[txt];
+$a=strrev($_POST[txt]);
+$b=explode(".",$a);
+$c=strrev($b[0]);
+echo "文件名后缀:".$c;
 }
 ?>
 <html>
@@ -36,6 +40,7 @@ opacity:0;
 </div>
 <div class="clear"></div>
 <input type="file" onchange="ehdel_upload_text.value=this.value" class="ehdel_upload" />
+<input type="submit" name="sub">
 </form>
 </body>
 </html>
