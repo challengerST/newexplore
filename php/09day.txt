@@ -1,0 +1,6 @@
+interception of chinese characters need to be preceded by 2 * length;
+interception of chinese characters please use md_substr;
+encryption code please use md5;
+ltrim and rtrim only can remove left and right spaces and want to remove special characters need to be specified in function; 
+addslashes function facilitates future escaping of special symbol ;
+Js and Php in the expression of the space is different;
