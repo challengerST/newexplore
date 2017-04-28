@@ -1,0 +1,4 @@
+strIops function in the process of finding is not case-sensitive;
+strrops,
+exclusive or encryption;
+No143:it is diffcult to intercepte the string ;
